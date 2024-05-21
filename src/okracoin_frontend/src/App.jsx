@@ -10,7 +10,6 @@ function App() {
 
   return (
     <main className='border border-white-100'>
-      <Page1 />
       <Page2 />
       {/* <SimpleBottomNavigation /> */}
     </main>

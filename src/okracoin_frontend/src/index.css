@@ -7,6 +7,10 @@ body {
   font-size: 1.5rem;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 img {
   max-width: 50vw;
   max-height: 25vw;

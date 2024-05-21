@@ -1,4 +1,6 @@
 import React from 'react';
+import "../index.css"
+import { mainimage } from '../assets';
 
 const Page2 = () => {
   return (
@@ -6,7 +8,7 @@ const Page2 = () => {
       <header className="px-4 lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
         <a className="flex items-center justify-center" href="#">
           <CoinsIcon className="h-6 w-6" />
-          <span className="text-lg font-bold ml-2">MemeToken</span>
+          <span className="text-lg font-bold ml-2">OKRA Coin</span>
         </a>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <a className="text-sm font-medium hover:underline underline-offset-4" href="#">
@@ -27,10 +29,10 @@ const Page2 = () => {
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-[#1F2937] text-white">
           <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <img
-              alt="Hero"
+              alt="okra images"
               className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
               height="550"
-              src="/placeholder.svg"
+              src={mainimage}
               width="550"
             />
             <div className="flex flex-col justify-center space-y-4">
