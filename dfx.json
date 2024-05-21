@@ -14,7 +14,7 @@
     "icrc1_ledger_canister": {
       "type": "custom",
       "candid": "icrc1_ledger.did",
-      "wasm": "icrc1_ledger.wasm.gz"
+      "wasm" : "icrc1_ledger.wasm.gz"
     },
     "okracoin_backend": {
       "main": "src/okracoin_backend/main.mo",

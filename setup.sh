@@ -40,4 +40,4 @@ record {
  }
 })"
 
-# ./did.sh && dfx generate test_token_1_backend && dfx deploy test_token_1_backend  # Command for deploying canister one locally
+./did.sh && dfx generate okracoin_backend && dfx deploy okracoin_backend  # Command for deploying canister one locally
