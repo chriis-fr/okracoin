@@ -1,29 +1,16 @@
 import { useState } from 'react';
 import { okracoin_backend } from 'declarations/okracoin_backend';
+import Page1 from './components/page1';
+import "./index.css"
+// import SimpleBottomNavigation from './components/bottomnav';
 
 function App() {
-  const [greeting, setGreeting] = useState('');
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    okracoin_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
 
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your namedd: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
+    <main className='border border-white-100'>
+      <Page1 />
+      {/* <SimpleBottomNavigation /> */}
     </main>
   );
 }
