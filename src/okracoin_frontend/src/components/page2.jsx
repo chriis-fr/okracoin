@@ -1,6 +1,6 @@
 import React from 'react';
 import "../index.css"
-import { mainimage } from '../assets';
+import { drink, mainimage } from '../assets';
 
 const Page2 = () => {
   return (
@@ -26,26 +26,29 @@ const Page2 = () => {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-[#1F2937] text-white">
-          <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+        <section className="w-full pl-6 pr-6 py-12 md:py-24 lg:py-32 xl:py-48 bg-[#1F2937] text-white">
+          <div className="container px- md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <img
-              alt="okra images"
-              className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
-              height="550"
+              alt="OKRACOIN"
+              className="overflow-hidden rounded-xl sm:w-full lg:order-last "
+              
               src={mainimage}
               width="550"
             />
-            <div className="flex flex-col justify-center space-y-4">
+            <div className="flex flex-col space-y-4">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Invest in the Future of Memes
+                <h1 className="text-3xl bungee-shade-regular text-red-300 font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  Invest in the Future of Okra.😜
                 </h1>
-                <p className="max-w-[600px] text-gray-300 md:text-xl">
-                  MemeToken is the ultimate meme-inspired cryptocurrency, designed to revolutionize the world of digital
+                <br />
+                <p className="max-w-[600px] text-lime-400 press-start-2p-regular text-gray-300 md:text-xl">
+                  <span>OKRACOIN</span> is the ultimate meme-inspired cryptocurrency, designed to revolutionize the world of digital
                   assets.
+                  <br />
+                  Get your Okracoin today!
                 </p>
               </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+              <div className="flex flex-col  gap-2 min-[400px]:flex-row justify-center">
                 <a
                   className="inline-flex h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                   href="#"
@@ -62,52 +65,50 @@ const Page2 = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#F3F4F6] dark:bg-[#1F2937]">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-[#E5E7EB] px-3 py-1 text-sm dark:bg-[#374151]">
-                  Key Features
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-[#1F2937] dark:text-white">
+        <section className="w-full py-12  md:py-24 lg:py-32 bg-[#F3F4F6] dark:bg-[#1F2937] ">
+          <div className="container px-4 md:px-6 ">
+            <div className=" items-center  space-y-4 text-center justify-center">
+              <div className="space-y-2  rounded-2xl violet-gradient w-full" >
+                
+                <h2 className="text-slate-950 font-bold press-start-2p-regular tracking-tighter sm:text-5xl text-3xl pt-4 p-2">
                   Revolutionize Your Investments
                 </h2>
-                <p className="max-w-[900px] text-[#6B7280] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-[#D1D5DB]">
-                  MemeToken offers a unique and exciting way to participate in the meme-driven economy. Discover the
+                <p className="max-w-[900px] text-red-900 finger-paint-regular p-2  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
+                   offers a unique and exciting way to participate in the meme-driven economy. Discover the
                   power of this innovative cryptocurrency.
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+            <div className="mx-auto grid  max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <img
                 alt="Image"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                height="310"
-                src="/placeholder.svg"
+                className="overflow-hidden rounded-xl h-full sm:w-full lg:order-last "
+                height="550"
+                src={drink}
                 width="550"
               />
               <div className="flex flex-col justify-center space-y-4">
                 <ul className="grid gap-6">
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold text-[#1F2937] dark:text-white">Meme-Inspired Rewards</h3>
-                      <p className="text-[#6B7280] dark:text-[#D1D5DB]">
+                      <h3 className="text-3xl font-bold shojumaru-regular text-lime-400">Meme-Inspired Rewards</h3>
+                      <p className="text-[#6B7280] finger-paint-regular dark:text-[#D1D5DB]">
                         Earn rewards for participating in the meme-driven economy.
                       </p>
                     </div>
                   </li>
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold text-[#1F2937] dark:text-white">Community-Driven Governance</h3>
-                      <p className="text-[#6B7280] dark:text-[#D1D5DB]">
+                      <h3 className="text-3xl font-bold shojumaru-regular text-lime-400">Community-Driven Governance</h3>
+                      <p className="text-[#6B7280] finger-paint-regular dark:text-[#D1D5DB]">
                         Influence the direction of MemeToken through community voting.
                       </p>
                     </div>
                   </li>
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold text-[#1F2937] dark:text-white">Deflationary Tokenomics</h3>
-                      <p className="text-[#6B7280] dark:text-[#D1D5DB]">
+                      <h3 className="text-3xl font-bold shojumaru-regular text-lime-400">Deflationary Tokenomics</h3>
+                      <p className="text-[#6B7280] finger-paint-regular dark:text-[#D1D5DB]">
                         Enjoy the benefits of a deflationary token model that increases scarcity.
                       </p>
                     </div>
@@ -120,20 +121,20 @@ const Page2 = () => {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-[#1F2937] text-white">
           <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-                Unlock the Power of Meme Investing
+              <h2 className="text-3xl text-amber-400 bungee-shade-regular font-bold tracking-tighter md:text-4xl/tight">
+                Unlock the Power of Okra Investing
               </h2>
-              <p className="max-w-[600px] text-[#D1D5DB] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                MemeToken offers a unique opportunity to participate in the meme-driven economy and potentially reap the
+              <p className="max-w-[600px] finger-paint-regular text-[#D1D5DB] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Okracoin offers a unique opportunity to participate in the meme-driven economy and potentially reap the
                 rewards.
               </p>
             </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
+            <div className="flex flex-col justify-center gap-2 min-[400px]:flex-row lg:justify-end">
               <a
                 className="inline-flex h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                 href="#"
               >
-                Buy MemeToken
+                Buy OkraCoin
               </a>
               <a
                 className="inline-flex h-10 items-center justify-center rounded-md border border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
@@ -148,11 +149,11 @@ const Page2 = () => {
           <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-[#E5E7EB] px-3 py-1 text-sm dark:bg-[#374151]">Community</div>
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-[#1F2937] dark:text-white">
-                Join the MemeToken Community
+              <h2 className="text-3xl text-amber-400 bungee-shade-regular font-bold tracking-tighter md:text-4xl/tight ">
+                Join the OkraCoin Community
               </h2>
-              <p className="max-w-[600px] text-[#6B7280] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-[#D1D5DB]">
-                Connect with like-minded investors and be a part of the meme-inspired revolution.
+              <p className="max-w-[600px] finger-paint-regular text-[#6B7280] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-[#D1D5DB]">
+                Connect with like-minded investors and be a part of the okra-inspired revolution.
               </p>
             </div>
             <div className="flex flex-col gap-4">
@@ -173,7 +174,7 @@ const Page2 = () => {
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-[#1F2937] text-white">
-        <p className="text-xs">© 2024 MemeToken. All rights reserved.</p>
+        <p className="text-xs">© 2024 OkraCoin. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <a className="text-xs hover:underline underline-offset-4" href="#">
             Terms of Service

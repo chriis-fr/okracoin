@@ -1,5 +1,7 @@
-import mainimage from "./okracoin.jpg"
+import mainimage from "./okracoin.png"
+import drink from "./drinkokra.png"
 
 export {
-    mainimage
+    mainimage,
+    drink
 }

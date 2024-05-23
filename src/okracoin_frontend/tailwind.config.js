@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{html,js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'press-start': [' "Jacquard 12" ', 'cursive'],
+      },
+    },
   },
   plugins: [],
 }

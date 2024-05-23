@@ -2,7 +2,11 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'press-start': ['"Jacquard 12"', 'cursive'],
+      },
+    },
   },
   plugins: [],
 }
