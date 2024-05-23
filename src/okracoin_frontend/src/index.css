@@ -83,3 +83,9 @@ button[type="submit"] {
     rgba(60, 51, 80, 0) 100%
   );
 }
+
+.monofett-regular {
+  font-family: "Monofett", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
