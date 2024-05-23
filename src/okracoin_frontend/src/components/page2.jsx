@@ -30,7 +30,7 @@ const Page2 = () => {
           <div className="container px- md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <img
               alt="OKRACOIN"
-              className="overflow-hidden rounded-xl sm:w-full lg:order-last "
+              className="overflow-hidden animate-pulse rounded-xl sm:w-full lg:order-last "
               
               src={mainimage}
               width="550"
@@ -82,7 +82,7 @@ const Page2 = () => {
             <div className="mx-auto grid  max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <img
                 alt="Image"
-                className="overflow-hidden rounded-xl h-full sm:w-full lg:order-last "
+                className="overflow-hidden animate-bounce rounded-xl h-full sm:w-full lg:order-last "
                 height="550"
                 src={drink}
                 width="550"
