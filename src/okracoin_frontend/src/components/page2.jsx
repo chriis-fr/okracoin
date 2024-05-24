@@ -8,7 +8,7 @@ const Page2 = () => {
       <header className="px-4 lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
         <a className="flex items-center justify-center" href="#">
           <CoinsIcon className="h-10 w-10 text-green-200" />
-          <span className="text-5xl text-orange-400 font-bold ml-2 monofett-regular">OKRA Coin</span>
+          <span className="text-4xl text-orange-400 font-bold ml-2 monofett-regular">OKRA Coin</span>
         </a>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4" href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08">
@@ -91,7 +91,7 @@ const Page2 = () => {
                 <ul className="grid gap-6">
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-3xl font-bold shojumaru-regular text-lime-400">Meme-Inspired Rewards</h3>
+                      <h3 className="text-3xl font-bold shojumaru-regular text-lime-400">Okra-Inspired Rewards</h3>
                       <p className="text-[#6B7280] finger-paint-regular dark:text-[#D1D5DB]">
                         Earn rewards for participating in the okra-driven economy.
                       </p>
