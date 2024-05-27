@@ -11,13 +11,6 @@
       "type": "custom",
       "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
     },
-    "candid_ui": {
-      "type": "assets",
-      "source": ["candid_ui.wasm"],
-      "frontend": {
-        "entrypoint": "src/frontend/index.html"
-      }
-    },
     "icrc1_ledger_canister": {
       "type": "custom",
       "candid": "icrc1_ledger.did",

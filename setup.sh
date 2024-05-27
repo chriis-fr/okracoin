@@ -11,7 +11,7 @@ dfx identity use default
 export DEFAULT=$(dfx identity get-principal)  
 
 export PRE_MINTED_TOKENS=10_000_000_000  # Insert amount of pre minted tokens 
-export TRANSFER_FEE=10  # Insert the transfer fee 
+export TRANSFER_FEE=10_000  # Insert the transfer fee 
 
 dfx identity new archive_controller  
 dfx identity use archive_controller  
@@ -40,4 +40,4 @@ record {
  }
 })"
 
-./did.sh && dfx generate okracoin_backend && dfx deploy okracoin_backend  # Command for deploying canister one locally
+# ./did.sh && dfx generate okracoin_backend && dfx deploy okracoin_backend  # Command for deploying canister one locally
