@@ -1,9 +1,8 @@
 import { AuthClient } from "@dfinity/auth-client"
 import {
     HttpAgent,
-    Actor
 } from "@dfinity/agent"
-import { idlFactory as icrc1LedgerIdl} from "../../declarations/icrc1_ledger_canister"
+import { icrc1_ledger_canister } from "../../declarations/icrc1_ledger_canister"
 
 export let icrc1Ledger = null;
 
@@ -24,11 +23,10 @@ export const initAuth = async () => {
 
 const handleAuthenticated = async (authClient) => {
     const identity = authClient.getIdentity();
-    const agent = new HttpAgent({identity})
+    const agent = new HttpAgent({identity});
 
-    agent.fetchRootKey();
-    icrc1Ledger = Actor.createActor(icrc1LedgerIdl, {
-        agent,
-        canisterId: "mxzaz-hqaaa-aaaar-qaada-cai"
-    })
+    await agent.fetchRootKey()
+
+    icrc1Ledger = icrc1_ledger_canister({agent})
+
 }
