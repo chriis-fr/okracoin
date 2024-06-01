@@ -1,21 +1,5 @@
 {
   "canisters": {
-    "internet_identity": {
-      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
-      "frontend": {},
-      "remote": {
-        "id": {
-          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
-        }
-      },
-      "type": "custom",
-      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
-    },
-    "icrc1_ledger_canister": {
-      "type": "custom",
-      "candid": "icrc1_ledger.did",
-      "wasm" : "icrc1_ledger.wasm.gz"
-    },
     "okracoin_backend": {
       "main": "src/okracoin_backend/main.mo",
       "type": "motoko"

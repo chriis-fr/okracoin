@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../index.css"
 import { drink, mainimage } from '../assets';
 
 const Page2 = () => {
+
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
@@ -57,7 +59,7 @@ const Page2 = () => {
                 </a>
                 <a
                   className="inline-flex finger-paint-regular h-10 items-center justify-center rounded-md border border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
-                  href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08"
+                  // href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08"
                 >
                   Learn More
                 </a>

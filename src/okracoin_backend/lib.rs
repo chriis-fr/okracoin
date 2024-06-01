@@ -7,7 +7,7 @@ async fn get_token_name() -> String {
     let req = (); 
 
     let (res, ): (String, ) = 
-       ic_cdk::call(ledger_id, "icrc1_name", (req, ))
+       ic_cdk::call(ledger_id, "icrc1_ledger", (req, ))
            .await.unwrap(); 
 
     res
