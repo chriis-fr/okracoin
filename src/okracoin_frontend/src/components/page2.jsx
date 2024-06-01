@@ -4,6 +4,36 @@ import { drink, mainimage } from '../assets';
 
 const Page2 = () => {
 
+  const PlugConnect  = async () => {
+    try{
+      if (typeof window.ic !== "undefined" && typeof window.ic.plug !== "undefined"){
+        const plug = window.ic.plug;
+
+        const connected = await plug.requestConnect({
+          whitelist: ["c5kvi-uuaaa-aaaaa-qaaia-cai"]
+        })
+
+        if (connected) {
+          const principal = await plug.getPrincipal()
+          console.log(principal.toText())
+          console.log("principle is connected as above")
+  
+        
+
+      }
+
+      // const frntCan = "c2lt4-zmaaa-aaaaa-qaaiq-cai"
+      // const bckCan ="c5kvi-uuaaa-aaaaa-qaaia-cai"
+
+
+    } else {
+      console.error("plug wallet not found")
+    }
+        }catch(error){
+      console.error("Plug wallet connection failed", error)
+      alert("error connection to wallet")
+    }
+  }
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -19,7 +49,7 @@ const Page2 = () => {
           <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4" href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08">
             Features
           </a>
-          <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4" href="#">
+          <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4" href="#" onClick={PlugConnect}>
             Buy
           </a>
           <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4" href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08">
@@ -44,7 +74,7 @@ const Page2 = () => {
                 </h1>
                 <br />
                 <p className="max-w-[600px] text-lime-400 press-start-2p-regular text-gray-300 md:text-xl">
-                  <span>OKRACOIN</span> is the ultimate meme-inspired cryptocurrency, designed to revolutionize the world of digital
+                  <span>OKRACOIN</span> is the ultimate Okra-inspired cryptocurrency, designed to revolutionize the world of digital
                   assets.
                   <br />
                   Get your Okracoin today!
@@ -54,6 +84,7 @@ const Page2 = () => {
                 <a
                   className="inline-flex  finger-paint-regular h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                   href="#"
+                  onClick={PlugConnect}
                 >
                   Buy OkraCoin
                 </a>
