@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import "../index.css"
 import { drink, mainimage } from '../assets';
+import { Link } from 'react-router-dom';
 
 const Page2 = () => {
+
+  const [show, setShow] = useState(null)
 
   const PlugConnect  = async () => {
     try{
@@ -18,8 +21,22 @@ const Page2 = () => {
           console.log(principal.toText())
           console.log("principle is connected as above")
   
-        
+        // const balance = await fetchBalance(principal)
 
+        function shortenPrincipal(principalId) {
+          const principalStr = principalId.toText();
+          if (principalStr.length <= 6) {
+            return principalStr; // If the ID is too short, return it as is.
+          }
+          const start = principalStr.slice(0, 3);
+          const end = principalStr.slice(-3);
+          return `${start}...${end}`;
+        }
+      
+        const newPrin = shortenPrincipal(principal)
+        console.log(newPrin)
+        setShow(newPrin)
+      
       }
 
       // const frntCan = "c2lt4-zmaaa-aaaaa-qaaiq-cai"
@@ -35,6 +52,24 @@ const Page2 = () => {
     }
   }
 
+  const copyToClipboard = () => {
+    const [copied, setCopied] = useState(false);
+    const text = "c36a6-tiaaa-aaaam-acpxa-cai"
+
+    const copyText = () => {
+      navigator.clipboard.writeText(text)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => {setCopied(false)}, 2000)
+      })
+      .catch(err => {
+        console.error("failed to copy text: ", err)
+        alert("failed to copy text")
+      })
+    }
+
+  }
+ 
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
@@ -43,8 +78,8 @@ const Page2 = () => {
           <span className="text-4xl text-orange-400 font-bold ml-2 monofett-regular">OKRA Coin</span>
         </a>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4" href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08">
-            About
+          <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4">
+            <Link to="/other">About</Link>
           </a>
           <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4" href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08">
             Features
@@ -56,10 +91,12 @@ const Page2 = () => {
             Community
           </a>
         </nav>
+        {!show && <button onClick={PlugConnect} className=' rounded-2xl m-2 w-[15%] h-[50%] hover:bg-orange-800 hover:h-[60%] bg-orange-400 finger-paint-regular flex items-center justify-center align-center cursor-pointer'><p className='text-sm text-green-300 cursor-pointer'>PLUG</p></button>}
+        {show && <div onClick={() => {alert("wallet connected! Buy OKra")}} className='rounded-2xl m-2 w-[15%] violet-gradient h-[50%] hover:h-[60%] finger-paint-regular text-red-600 hover:bg-violet-500 flex items-center justify-center cursor-pointer'><p className='text-sm cursor-pointer'>{show}</p></div>}
       </header>
       <main className="flex-1 ">
         <section className="w-full pl-6 pr-6 py-12 md:py-24 lg:py-32 xl:py-48 bg-[#1F2937] text-white">
-          <div className="container px- md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+          <div className="container px-6 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <img
               alt="OKRACOIN"
               className="overflow-hidden animate-pulse rounded-xl sm:w-full lg:order-last "
@@ -67,6 +104,7 @@ const Page2 = () => {
               src={mainimage}
               width="550"
             />
+            
             <div className="flex flex-col space-y-4">
               <div className="space-y-2">
                 <h1 className="text-3xl bungee-shade-regular text-red-300 font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
@@ -76,24 +114,32 @@ const Page2 = () => {
                 <p className="max-w-[600px] text-lime-400 press-start-2p-regular text-gray-300 md:text-xl">
                   <span>OKRACOIN</span> is the ultimate Okra-inspired cryptocurrency, designed to revolutionize the world of digital
                   assets.
+
                   <br />
-                  Get your Okracoin today!
+                  
+                  <span className='italic'>Get your Okracoin today!</span>
+                  <p className='text-red-500 pt-3 underline'>Lubricate your wallet NOWWW!!</p>
                 </p>
+                
               </div>
               <div className="flex flex-col text-orange-400 gap-2 min-[400px]:flex-row justify-center">
-                <a
-                  className="inline-flex  finger-paint-regular h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
+                <div
+                  className="inline-flex cursor-pointer finger-paint-regular h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                   href="#"
-                  onClick={PlugConnect}
+                  onClick={copyToClipboard}
+                  
                 >
-                  Buy OkraCoin
-                </a>
-                <a
-                  className="inline-flex finger-paint-regular h-10 items-center justify-center rounded-md border border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
-                  // href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08"
+                  <p className='font-bold'>
+                    click me to copy canister id...
+                  </p>
+                </div>
+                <div
+                  className="inline-flex finger-paint-regular h-10 items-center justify-center rounded-md  border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                 >
-                  Learn More
-                </a>
+                  <p className='font-bold'>
+                    ...copy to plug wallet and buy OKRA
+                  </p>
+                </div>
               </div>
             </div>
           </div>
