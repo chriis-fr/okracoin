@@ -13,7 +13,7 @@ const Page2 = () => {
         const plug = window.ic.plug;
 
         const connected = await plug.requestConnect({
-          whitelist: ["c5kvi-uuaaa-aaaaa-qaaia-cai"]
+          whitelist: ["bkyz2-fmaaa-aaaaa-qaaaq-cai", "bd3sg-teaaa-aaaaa-qaaba-cai"]
         })
 
         if (connected) {
@@ -180,7 +180,7 @@ const Page2 = () => {
                     <div className="grid gap-1">
                       <h3 className="text-3xl font-bold shojumaru-regular text-lime-400">Community-Driven Governance</h3>
                       <p className="text-[#6B7280] finger-paint-regular dark:text-[#D1D5DB]">
-                        Influence the direction of OkraCoin through community voting.
+                        Influence the direction of OkraCoin through community voting.*
                       </p>
                     </div>
                   </li>
@@ -188,7 +188,7 @@ const Page2 = () => {
                     <div className="grid gap-1">
                       <h3 className="text-3xl font-bold shojumaru-regular text-lime-400">Deflationary Tokenomics</h3>
                       <p className="text-[#6B7280] finger-paint-regular dark:text-[#D1D5DB]">
-                        Enjoy the benefits of a deflationary token model that increases scarcity.
+                        Enjoy the benefits of a deflationary token model that increases scarcity, with 1 trillion tokens aleady in circulation
                       </p>
                     </div>
                   </li>

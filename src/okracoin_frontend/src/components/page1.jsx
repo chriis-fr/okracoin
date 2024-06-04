@@ -23,6 +23,7 @@ const Page1 = () => {
       const updateNotes = await experience.readNotes()
       setNotes(updateNotes)
       addNote()
+      alert("our team will review your share for community guidlines. bear with us. it may take a while")
     } else {
       alert("Error")
     }
