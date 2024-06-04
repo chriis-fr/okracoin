@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { write } from '../assets';
 
 const Experiences = () => {
   return (
@@ -17,10 +18,61 @@ const Experiences = () => {
           </a>
           
           <a className="text-sm finger-paint-regular text-lime-500 font-medium hover:underline underline-offset-4">
-            <Link to="/other">Back</Link>
+            <Link to="/share">Share</Link>
           </a>
         </nav>
       </header>
+      <main className="flex-1">
+        <section className="w-full pl-6 pr-6 py-12 md:py-24 lg:py-32 xl:py-48 bg-[#1F2937] text-white">
+        <div className="container px-6 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+            <p className='flex items-center justify-center text-4xl pb-2 bungee-shade-regular text-red-300 font-bold tracking-tighter'>Gain insight from what others say</p>
+        </div>
+        <section className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 md:p-6">
+            <div className='container px-6 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]'>
+                {/* <div className="bg-white rounded-2xl shadow-lg overflow-hidden dark:bg-gray-950">
+                    <div className="p-4 md:p-6">
+                    <h3 className="text-3xl font-bold shojumaru-regular text-orange-400">Card Title 1</h3>
+                    <p className="mt-2 text-lime-400 press-start-2p-regular text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl
+                        aliquam nisl, nec aliquam nisl nisl sit amet nisl.
+                    </p>
+                    </div>
+                </div> */}
+        <div className='flex flex-col space-y-4'>
+            <h1 className='text-3xl font-bold shojumaru-regular text-lime-400'>
+                Oops, nothing to see here! Be the first to share your experience
+            </h1>
+        </div>
+        <div >
+        <img
+              alt="OKRACOIN"
+              className="overflow-hidden  animate-pulse rounded-xl sm:w-full lg:order-last "
+              width="550"
+              src={write}
+            />
+        </div>
+        </div>
+        </section>
+        </section>
+        
+      </main>
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-[#1F2937] text-white">
+        <p className="text-xs">© 2024 OkraCoin. All rights reserved.</p>
+        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+          <a className="text-xs hover:underline underline-offset-4" href="https://termify.io/terms-of-service-generator">
+            Terms of Service
+          </a>
+          <a className="text-xs hover:underline underline-offset-4" href="https://termify.io/privacy-policy-generator">
+            Privacy Policy
+          </a>
+          <a className="text-xs hover:underline underline-offset-4" href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08">
+            Twitter
+          </a>
+          <a className="text-xs hover:underline underline-offset-4" onClick={() => {alert("Discord coming soon")}}>
+            Discord
+          </a>
+        </nav>
+      </footer>
     </div>
   )
 }

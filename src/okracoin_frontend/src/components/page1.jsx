@@ -40,7 +40,7 @@ const Page1 = () => {
                 </p>
               </div>
             </div>
-            <div className='w-[80%]'>
+            <div>
             <main className="flex-1 py-8 px-4 md:px-8 lg:px-12">
                 <div className="max-w-md mx-auto">
                   <form  className="space-y-4">
@@ -51,7 +51,7 @@ const Page1 = () => {
                       <input
                         type="text"
                         id="name"
-                        onChange={(e) => setName(e.target.value)}
+                        onChange={(e) => alert("changed")}
                         className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                     </div>

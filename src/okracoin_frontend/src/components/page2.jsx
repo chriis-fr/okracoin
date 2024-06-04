@@ -79,16 +79,16 @@ const Page2 = () => {
         </a>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4">
-            <Link to="/other">About</Link>
+            <Link to="/share">Share</Link>
           </a>
           <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4" href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08">
-            Features
+            <Link to="/experiences">Experiences</Link>
           </a>
-          <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4" href="#" onClick={PlugConnect}>
-            Buy
-          </a>
-          <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4" href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08">
+          <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4" href="https://t.me/okracoin">
             Community
+          </a>
+          <a className="text-sm cursor-pointer finger-paint-regular font-medium hover:underline underline-offset-4"  onClick={PlugConnect}>
+            Buy
           </a>
         </nav>
         {!show && <button onClick={PlugConnect} className=' rounded-2xl m-2 w-[15%] h-[50%] hover:bg-orange-800 hover:h-[60%] bg-orange-400 finger-paint-regular flex items-center justify-center align-center cursor-pointer'><p className='text-sm text-green-300 cursor-pointer'>PLUG</p></button>}
@@ -255,16 +255,16 @@ const Page2 = () => {
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-[#1F2937] text-white">
         <p className="text-xs">© 2024 OkraCoin. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <a className="text-xs hover:underline underline-offset-4" href="#">
+          <a className="text-xs hover:underline underline-offset-4" href="https://termify.io/terms-of-service-generator">
             Terms of Service
           </a>
-          <a className="text-xs hover:underline underline-offset-4" href="#">
+          <a className="text-xs hover:underline underline-offset-4" href="https://termify.io/privacy-policy-generator">
             Privacy Policy
           </a>
-          <a className="text-xs hover:underline underline-offset-4" href="#">
+          <a className="text-xs hover:underline underline-offset-4" href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08">
             Twitter
           </a>
-          <a className="text-xs hover:underline underline-offset-4" href="#">
+          <a className="text-xs hover:underline underline-offset-4" onClick={() => {alert("Discord coming soon")}}>
             Discord
           </a>
         </nav>
