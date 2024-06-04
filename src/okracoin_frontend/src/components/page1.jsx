@@ -1,10 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../index.css"
 import { Link } from 'react-router-dom'
 import {  second } from '../assets'
+import { experience } from '../agent'
 
 const Page1 = () => {
 
+  const [name, setName] = useState("")
+  const [content, setContent] = useState("")
+  const [notes, setNotes] = useState(experience.readNotes())
+
+  async function handleSubmit(event) {
+    try{
+    event.preventDefault()
+    setName("")
+    setContent("")
+    if(content.trim()) {
+      await experience.createNote(
+        name || "Anonymous",
+        content
+      );
+      const updateNotes = await experience.readNotes()
+      setNotes(updateNotes)
+      addNote()
+    } else {
+      alert("Error")
+    }
+  } catch(error){
+    alert("Please share to our telegram, we are experiencing technical difficulties")
+  }
+  }
+
+  function addNote(newNote) {
+    setNotes(prevNotes => {
+      experience.createNote(newNote.title, newNote.content)
+      return [newNote, ...prevNotes];
+    })
+  }
   
 
   return (
@@ -43,7 +75,7 @@ const Page1 = () => {
             <div>
             <main className="flex-1 py-8 px-4 md:px-8 lg:px-12">
                 <div className="max-w-md mx-auto">
-                  <form  className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <label htmlFor="name" className="text-3xl font-bold shojumaru-regular text-lime-400">
                         Name<span className='text-sm text-red-500'> (anonymous)</span>
@@ -51,7 +83,8 @@ const Page1 = () => {
                       <input
                         type="text"
                         id="name"
-                        onChange={(e) => alert("changed")}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                     </div>
@@ -61,7 +94,8 @@ const Page1 = () => {
                       </label>
                       <textarea
                         id="review"
-                        onChange={(e) => setReview(e.target.value)}
+                        value={content}
+                        onChange={(e) => setContent(e.target.value)}
                         rows={4}
                         className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />

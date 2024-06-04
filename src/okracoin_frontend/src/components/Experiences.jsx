@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { write } from '../assets';
+import { experience } from '../agent';
+// import { experience } from "../../../declarations/okracoin_backend"
 
 const Experiences = () => {
+
+    const [expo, setExpo] = useState([])
+
+    useEffect(() => {
+      const fetchData = async () => {
+        const fetchedNotes = await experience.readNotes();
+        setExpo(fetchedNotes)
+      };
+
+      fetchData()
+    }, [])
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
         <header className="px-4 lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
@@ -27,30 +41,49 @@ const Experiences = () => {
         <div className="container px-6 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <p className='flex items-center justify-center text-4xl pb-2 bungee-shade-regular text-red-300 font-bold tracking-tighter'>Gain insight from what others say</p>
         </div>
-        <section className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 md:p-6">
+        <section className=" grid border grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 md:p-6">
             <div className='container px-6 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]'>
-                {/* <div className="bg-white rounded-2xl shadow-lg overflow-hidden dark:bg-gray-950">
-                    <div className="p-4 md:p-6">
-                    <h3 className="text-3xl font-bold shojumaru-regular text-orange-400">Card Title 1</h3>
-                    <p className="mt-2 text-lime-400 press-start-2p-regular text-sm">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl
-                        aliquam nisl, nec aliquam nisl nisl sit amet nisl.
-                    </p>
-                    </div>
-                </div> */}
-        <div className='flex flex-col space-y-4'>
-            <h1 className='text-3xl font-bold shojumaru-regular text-lime-400'>
-                Oops, nothing to see here! Be the first to share your experience
-            </h1>
-        </div>
-        <div >
-        <img
-              alt="OKRACOIN"
-              className="overflow-hidden  animate-pulse rounded-xl sm:w-full lg:order-last "
-              width="550"
-              src={write}
-            />
-        </div>
+                {
+                  expo.length >= 1 && expo.map((note, index) => {
+                    return(
+                      <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden dark:bg-gray-950">
+                        <div className="p-4 md:p-6">
+                        <h3 className="text-3xl font-bold shojumaru-regular text-orange-400">{note.title}</h3>
+                        <p className="mt-2 text-lime-400 press-start-2p-regular text-sm">
+                          {note.content}
+                        </p>
+                        </div>
+                        <div>
+                        <img
+                        alt="OKRACOIN"
+                        className="overflow-hidden  animate-pulse rounded-[80%] sm:w-full lg:order-last "
+                        width="550"
+                        src={write}
+                      />
+                        </div>
+                      </div>
+                    )
+                  })
+                }
+                {expo.length === 0 && 
+                  <div className='flex flex-col space-y-4 container px-6 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]'>
+                  <div className='flex flex-col space-y-4'>
+                  <h1 className='text-3xl font-bold shojumaru-regular text-lime-400'>
+                      Oops, nothing to see here! 
+                      <br />
+                      Be the first to share your experience
+                  </h1>
+              </div>
+              <div >
+              <img
+                    alt="OKRACOIN"
+                    className="overflow-hidden  animate-pulse rounded-[80%] sm:w-full lg:order-last "
+                    width="550"
+                    src={write}
+                  />
+              </div>
+              </div>
+                }
         </div>
         </section>
         </section>
