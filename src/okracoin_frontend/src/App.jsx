@@ -9,6 +9,7 @@ import {
   Routes,
   Link
 } from "react-router-dom"
+import { Experiences } from './components';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Page2 />} />
         <Route path='/other' element={<Page1 />} />
+        <Route path='/experiences' element={<Experiences />} />
       </Routes>
     </div>
   </Router>
