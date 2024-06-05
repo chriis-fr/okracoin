@@ -174,7 +174,7 @@ const Page2 = () => {
                       </p>
                       <img
                         alt="OKRACOIN"
-                        className="overflow-hidden animate-bounce rounded-xl sm:w-full lg:order-last "
+                        className="overflow-hidden  rounded-xl sm:w-full lg:order-last "
                         src={aura}
                         width="550"
                       />
@@ -188,7 +188,7 @@ const Page2 = () => {
                       </p>
                       <img
                         alt="OKRACOIN"
-                        className="overflow-hidden animate-bounce rounded-xl sm:w-full lg:order-last "
+                        className="overflow-hidden rounded-xl sm:w-full lg:order-last "
                         src={laura}
                         width="550"
                       />
