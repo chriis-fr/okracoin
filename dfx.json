@@ -2,7 +2,8 @@
   "canisters": {
     "okracoin_backend": {
       "main": "src/okracoin_backend/main.mo",
-      "type": "motoko"
+      "type": "motoko",
+      "id": "xudgm-bqaaa-aaaak-qikmq-cai"
     },
     "okracoin_frontend": {
       "dependencies": [
@@ -12,7 +13,8 @@
         "src/okracoin_frontend/dist"
       ],
       "type": "assets",
-      "workspace": "okracoin_frontend"
+      "workspace": "okracoin_frontend",
+      "id": "x5anq-xyaaa-aaaak-qikna-cai"
     }
   },
   "defaults": {

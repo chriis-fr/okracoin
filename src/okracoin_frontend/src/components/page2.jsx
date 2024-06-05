@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "../index.css"
-import { drink, mainimage } from '../assets';
+import { aura, drink, laura, mainimage } from '../assets';
 import { Link } from 'react-router-dom';
 
 const Page2 = () => {
@@ -71,13 +71,13 @@ const Page2 = () => {
   }
  
   return (
-    <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
+    <div className="flex flex-col  min-w-[80vh] min-h-[100dvh]">
+      <header className="px-4 fixed overflow-hidden  w-[100%] lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
         <a className="flex items-center justify-center" href="#">
           <CoinsIcon className="h-10 w-10 text-green-200" />
-          <span className="text-4xl text-orange-400 font-bold ml-2 monofett-regular">OKRA Coin</span>
+          <span className="text-2xl text-orange-400 font-bold ml-2 monofett-regular">OKRA Coin</span>
         </a>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
+        <nav className="ml-auto flex  gap-4 sm:gap-6">
           <a className="text-sm finger-paint-regular font-medium hover:underline underline-offset-4">
             <Link to="/share">Share</Link>
           </a>
@@ -99,8 +99,7 @@ const Page2 = () => {
           <div className="container px-6 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <img
               alt="OKRACOIN"
-              className="overflow-hidden animate-pulse rounded-xl sm:w-full lg:order-last "
-              
+              className="overflow-hiddn animate-pulse rounded-xl sm:w-full lg:order-last "
               src={mainimage}
               width="550"
             />
@@ -125,7 +124,6 @@ const Page2 = () => {
               <div className="flex flex-col text-orange-400 gap-2 min-[400px]:flex-row justify-center">
                 <div
                   className="inline-flex cursor-pointer finger-paint-regular h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
-                  href="#"
                   onClick={copyToClipboard}
                   
                 >
@@ -174,6 +172,12 @@ const Page2 = () => {
                       <p className="text-[#6B7280] finger-paint-regular dark:text-[#D1D5DB]">
                         Earn rewards for participating in the okra-driven economy.
                       </p>
+                      <img
+                        alt="OKRACOIN"
+                        className="overflow-hidden animate-bounce rounded-xl sm:w-full lg:order-last "
+                        src={aura}
+                        width="550"
+                      />
                     </div>
                   </li>
                   <li>
@@ -182,6 +186,12 @@ const Page2 = () => {
                       <p className="text-[#6B7280] finger-paint-regular dark:text-[#D1D5DB]">
                         Influence the direction of OkraCoin through community voting.*
                       </p>
+                      <img
+                        alt="OKRACOIN"
+                        className="overflow-hidden animate-bounce rounded-xl sm:w-full lg:order-last "
+                        src={laura}
+                        width="550"
+                      />
                     </div>
                   </li>
                   <li>

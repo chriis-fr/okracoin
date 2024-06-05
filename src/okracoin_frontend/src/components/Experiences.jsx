@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { write } from '../assets';
 import { experience } from '../agent';
-// import { experience } from "../../../declarations/okracoin_backend"
 
 const Experiences = () => {
 
@@ -19,7 +18,7 @@ const Experiences = () => {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-        <header className="px-4 lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
+        <header className="px-4 mb-4 w-full fixed overflow-hidden lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
         <a className="flex items-center justify-center" >
           <Link to="/">
           <CoinsIcon className="h-10 w-10 text-green-200" />

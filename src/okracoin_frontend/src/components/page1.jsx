@@ -42,12 +42,12 @@ const Page1 = () => {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-        <header className="px-4 lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
+        <header className="px-4 lg:px-6 w-full fixed overflow-hidden h-14 flex items-center bg-[#1F2937] text-white">
         <a className="flex items-center justify-center" >
           <Link to="/">
           <CoinsIcon className="h-10 w-10 text-green-200" />
           </Link>
-          <span className="text-4xl text-orange-400 font-bold ml-2 monofett-regular">OKRA Coin</span>
+          <span className="text-3xl text-orange-400 font-bold ml-2 monofett-regular">OKRA Coin</span>
         </a>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <a className="text-sm finger-paint-regular text-red-400 font-medium hover:underline underline-offset-4">
@@ -55,7 +55,7 @@ const Page1 = () => {
           </a>
           
           <a className="text-sm finger-paint-regular text-lime-500 font-medium hover:underline underline-offset-4">
-            <Link>More Experiences</Link>
+            <Link to="/experiences">More Experiences</Link>
           </a>
         </nav>
       </header>
