@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const Page2 = () => {
 
   const [show, setShow] = useState(null)
+  const [copy, setCopied] = useState(false)
 
   const PlugConnect  = async () => {
     try{
@@ -52,24 +53,23 @@ const Page2 = () => {
     }
   }
 
-  const copyToClipboard = () => {
-    const [copied, setCopied] = useState(false);
-    const text = "c36a6-tiaaa-aaaam-acpxa-cai"
+  
 
-    const copyText = () => {
-      navigator.clipboard.writeText(text)
-      .then(() => {
-        setCopied(true);
-        setTimeout(() => {setCopied(false)}, 2000)
-      })
-      .catch(err => {
-        console.error("failed to copy text: ", err)
-        alert("failed to copy text")
-      })
+  const copyText = async () => {
+    const textToCopy = "c36a6-tiaaa-aaaam-acpxa-cai"; // Replace with your desired text
+  
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      console.log("Copied text successfully!");
+      setCopied(true); // Update state for visual feedback
+      setTimeout(() => setCopied(false), 5000); // Reset state after 2 seconds
+    } catch (err) {
+      console.error("Failed to copy text:", err);
+      alert("Failed to copy text. Please check browser permissions."); // Informative error message
     }
+  };
+    
 
-  }
- 
   return (
     <div className="flex flex-col  min-w-[80vh] min-h-[100dvh]">
       <header className="px-4 fixed overflow-hidden  w-[100%] lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
@@ -124,17 +124,16 @@ const Page2 = () => {
               <div className="flex flex-col text-orange-400 gap-2 min-[400px]:flex-row justify-center">
                 <div
                   className="inline-flex cursor-pointer finger-paint-regular h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
-                  onClick={copyToClipboard}
-                  
+                  onClick={copyText}
                 >
                   <p className='font-bold'>
-                    click me to copy canister id...
+                    {copy ? "copied" : "click me to copy canister id..." }
                   </p>
                 </div>
                 <div
                   className="inline-flex finger-paint-regular h-10 items-center justify-center rounded-md  border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                 >
-                  <p className='font-bold'>
+                  <p className=' cursor-pointer font-bold'>
                     ...copy to plug wallet and buy OKRA
                   </p>
                 </div>
