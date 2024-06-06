@@ -127,14 +127,14 @@ const Page2 = () => {
                   onClick={copyText}
                 >
                   <p className='font-bold'>
-                    {copy ? "copied" : "click me to copy canister id..." }
+                    {copy ? "copied" : " copy OKR canister id to wallet" }
                   </p>
                 </div>
                 <div
                   className="inline-flex finger-paint-regular h-10 items-center justify-center rounded-md  border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                 >
-                  <p className=' cursor-pointer font-bold'>
-                    ...copy to plug wallet and buy OKRA
+                  <p className=' font-bold'>
+                    c36a6-tiaaa-aaaam-acpxa-cai
                   </p>
                 </div>
               </div>
