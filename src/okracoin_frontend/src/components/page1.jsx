@@ -61,14 +61,14 @@ const Page1 = () => {
       </header>
 
       <main className='flex-1 '>
-      <section className="w-full py-12  md:py-24 lg:py-32 bg-[#F3F4F6] dark:bg-[#1F2937] ">
+      <section className="w-full py-12  md:py-24 lg:py-32 bg-lime-100 dark:bg-[#1F2937] ">
           <div className="container px-4 md:px-6 ">
             <div className=" items-center  space-y-4 text-center justify-center">
               <div className="space-y-2 flex flex-col items-center rounded-2xl violet-gradient w-full" >
-                <h2 className="text-slate-950 font-bold press-start-2p-regular tracking-tighter sm:text-4xl text-2xl pt-4 p-2">
+                <h2 className="text-slate-950 font-bold roboto-black-italic tracking-tighter sm:text-4xl text-2xl pt-4 p-2">
                   Submit your experiences, tell us what you think about Okra😏
                 </h2>
-                <p className="max-w-[900px] text-red-900 finger-paint-regular p-2  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
+                <p className="max-w-[900px] text-red-900 roboto-black-italic p-2  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
                    <span className='font-bold text-3xls'>OkraCoin</span> provides a platform for <span className='font-bold text-3xls'>YOU</span> to share with us your experience with Okra and tell the world how best it would benefit them as well.
                 </p>
               </div>
@@ -78,7 +78,7 @@ const Page1 = () => {
                 <div className="max-w-md mx-auto">
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                      <label htmlFor="name" className="text-3xl font-bold shojumaru-regular text-lime-400">
+                      <label htmlFor="name" className="text-3xl font-bold roboto-black-italic text-lime-400">
                         Name<span className='text-sm text-red-500'> (anonymous)</span>
                       </label>
                       <input
@@ -90,7 +90,7 @@ const Page1 = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="review" className="text-3xl font-bold shojumaru-regular text-lime-400">
+                      <label htmlFor="review" className="text-3xl font-bold roboto-black-italic text-lime-400">
                         Experience
                       </label>
                       <textarea
@@ -105,20 +105,20 @@ const Page1 = () => {
                       type="submit"
                       className="bg-yellow-500 text-violet-500 px-4 py-2 rounded-3xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
-                      <p className='cursor-pointer text-3xl font-bold shojumaru-regular text-lime-400'>submit</p>
+                      <p className='cursor-pointer text-3xl font-bold roboto-black-italic text-lime-400'>submit</p>
                     </button>
                   </form>
                 </div>
             </main>
             </div>
             <div className="mx-auto grid flex max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <img
+              {/* <img
                 alt="Image"
                 className="overflow-hidden flex justify-center items-center animate-bounce rounded-xl h-full sm:w-full lg:order-last "
                 height="550"
                 src={second}
                 width="550"
-              />
+              /> */}
             </div>
           </div>
         </section>

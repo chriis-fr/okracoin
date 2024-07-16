@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import { write } from '../assets';
+import { aura } from '../assets';
 import { experience } from '../agent';
 
 const Experiences = () => {
@@ -36,9 +36,9 @@ const Experiences = () => {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full pl-6 pr-6 py-12 md:py-24 lg:py-32 xl:py-48 bg-[#1F2937] text-white">
+        <section className="w-full pl-6 pr-6 py-12 md:py-24 lg:py-32 xl:py-48 bg-lime-100 text-white">
         <div className="container px-6 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <p className='flex items-center justify-center text-4xl pb-2 bungee-shade-regular text-red-300 font-bold tracking-tighter'>Gain insight from what others say</p>
+            <p className='flex items-center justify-center text-4xl pb-2 bungee-shade-regular text-red-700 font-bold tracking-tighter'>Gain insight from what others say</p>
         </div>
         <section className=" grid border grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 md:p-6">
             <div className='container px-6 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]'>
@@ -57,7 +57,7 @@ const Experiences = () => {
                         alt="OKRACOIN"
                         className="overflow-hidden  animate-pulse rounded-[80%] sm:w-full lg:order-last "
                         width="550"
-                        src={write}
+                        src={aura}
                       />
                         </div>
                       </div>
@@ -67,7 +67,7 @@ const Experiences = () => {
                 {expo.length === 0 && 
                   <div className='flex flex-col space-y-4 container px-6 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]'>
                   <div className='flex flex-col space-y-4'>
-                  <h1 className='text-3xl font-bold shojumaru-regular text-lime-400'>
+                  <h1 className='text-3xl font-bold roboto-black-italic text-lime-400'>
                       Oops, nothing to see here! 
                       <br />
                       Be the first to share your experience
@@ -78,7 +78,7 @@ const Experiences = () => {
                     alt="OKRACOIN"
                     className="overflow-hidden  animate-pulse rounded-[80%] sm:w-full lg:order-last "
                     width="550"
-                    src={write}
+                    src={aura}
                   />
               </div>
               </div>

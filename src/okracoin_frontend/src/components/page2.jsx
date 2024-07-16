@@ -71,7 +71,7 @@ const Page2 = () => {
     
 
   return (
-    <div className="flex flex-col  min-w-[80vh] min-h-[100dvh]">
+    <div className="flex flex-col  min-w-[80vh] min-h-[100dvh] bg-green-300">
       <header className="px-4 fixed overflow-hidden  w-[100%] lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
         <a className="flex items-center justify-center" href="#">
           <CoinsIcon className="h-10 w-10 text-green-200" />
@@ -91,26 +91,28 @@ const Page2 = () => {
             Buy
           </a>
         </nav>
-        {!show && <button onClick={PlugConnect} className=' rounded-2xl m-2 w-[15%] h-[50%] hover:bg-orange-800 hover:h-[60%] bg-orange-400 finger-paint-regular flex items-center justify-center align-center cursor-pointer'><p className='text-sm text-green-300 cursor-pointer'>PLUG</p></button>}
+        {!show && <button onClick={PlugConnect} className='rounded-2xl m-2 w-[15%] h-[50%] hover:bg-orange-800 hover:h-[60%] bg-orange-600 hover:text-white finger-paint-regular flex items-center justify-center align-center cursor-pointer'><p className='text-sm  text-white font-bold cursor-pointer'>PLUG</p></button>}
         {show && <div onClick={() => {alert("wallet connected! Buy OKra")}} className='rounded-2xl m-2 w-[15%] violet-gradient h-[50%] hover:h-[60%] finger-paint-regular text-red-600 hover:bg-violet-500 flex items-center justify-center cursor-pointer'><p className='text-sm cursor-pointer'>{show}</p></div>}
       </header>
-      <main className="flex-1 ">
-        <section className="w-full pl-6 pr-6 py-12 md:py-24 lg:py-32 xl:py-48 bg-[#1F2937] text-white">
-          <div className="container px-6 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+      <main className="flex-1 bg-green-100">
+        <section className="w-full pl-6 pr-6 py-12 md:py-24 lg:py-32 xl:py-48 bg-lime-100  text-white">
+          <div className="px-6 md:px-6 grid gap-3 lg:grid-cols-[1fr_400px] lg:gap-6 xl:grid-cols-[1fr_600px]">
+            <div className=' lg:order-last md:w-[100%]'>
             <img
               alt="OKRACOIN"
-              className="overflow-hiddn animate-pulse rounded-xl sm:w-full lg:order-last "
+              className="overflow-hidden  rounded-xl lg:order-last "
               src={mainimage}
-              width="550"
+              width="500px"
             />
+            </div>
             
             <div className="flex flex-col space-y-4">
               <div className="space-y-2">
-                <h1 className="text-3xl bungee-shade-regular text-red-300 font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                <h1 className="text-3xl bungee-shade-regular text-red-700 font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                   Invest in the Future of Okra.😜
                 </h1>
                 <br />
-                <p className="max-w-[600px] text-lime-400 press-start-2p-regular text-gray-300 md:text-xl">
+                <p className="max-w-[600px] text-green-900 roboto-black-italic  text-gray-300 md:text-2xl">
                   <span>OKRACOIN</span> is the ultimate Okra-inspired cryptocurrency, designed to revolutionize the world of digital
                   assets.
 
@@ -123,7 +125,7 @@ const Page2 = () => {
               </div>
               <div className="flex flex-col text-orange-400 gap-2 min-[400px]:flex-row justify-center">
                 <div
-                  className="inline-flex cursor-pointer finger-paint-regular h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex cursor-pointer roboto-black-italic h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                   onClick={copyText}
                 >
                   <p className='font-bold'>
@@ -131,7 +133,7 @@ const Page2 = () => {
                   </p>
                 </div>
                 <div
-                  className="inline-flex finger-paint-regular h-10 items-center justify-center rounded-md  border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex roboto-black-italic h-10 items-center justify-center rounded-md  border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                 >
                   <p className=' font-bold'>
                     c36a6-tiaaa-aaaam-acpxa-cai
@@ -141,15 +143,15 @@ const Page2 = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12  md:py-24 lg:py-32 bg-[#F3F4F6] dark:bg-[#1F2937] ">
+        <section className="w-full py-12  md:py-24 lg:py-32 bg-lime-100 dark:bg-[#1F2937] ">
           <div className="container px-4 md:px-6 ">
             <div className=" items-center  space-y-4 text-center justify-center">
-              <div className="space-y-2  rounded-2xl violet-gradient w-full" >
+              <div className="space-y-2  rounded-2xl  w-full" >
                 
-                <h2 className="text-slate-950 font-bold press-start-2p-regular tracking-tighter sm:text-5xl text-3xl pt-4 p-2">
+                <h2 className="text-red-700 font-bold roboto-black-italic tracking-tighter sm:text-5xl text-3xl pt-4 p-2">
                   Revolutionize Your Investments
                 </h2>
-                <p className="max-w-[900px] text-red-900 finger-paint-regular p-2  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
+                <p className="max-w-[900px] text-red-900 roboto-black-italic p-2  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
                    <span className='font-bold text-3xls'>OkraCoin</span> offers a unique and exciting way to participate in the okra-driven economy. Discover the
                   power of this innovative cryptocurrency.
                 </p>
@@ -158,45 +160,45 @@ const Page2 = () => {
             <div className="mx-auto grid  max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <img
                 alt="Image"
-                className="overflow-hidden animate-bounce rounded-xl h-full sm:w-full lg:order-last "
+                className="overflow-hidden rounded-xl h-full sm:w-full lg:order-last "
                 height="550"
-                src={drink}
+                src={laura}
                 width="550"
               />
               <div className="flex flex-col justify-center space-y-4">
                 <ul className="grid gap-6">
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-3xl font-bold shojumaru-regular text-lime-400">Okra-Inspired Rewards</h3>
-                      <p className="text-[#6B7280] finger-paint-regular dark:text-[#D1D5DB]">
+                      <h3 className="text-3xl font-bold roboto-black-italic text-lime-400">Okra-Inspired Rewards</h3>
+                      <p className="text-[#6B7280] roboto-black-italic dark:text-[#D1D5DB]">
                         Earn rewards for participating in the okra-driven economy.
                       </p>
-                      <img
+                      {/* <img
                         alt="OKRACOIN"
                         className="overflow-hidden  rounded-xl sm:w-full lg:order-last "
                         src={aura}
                         width="550"
-                      />
+                      /> */}
                     </div>
                   </li>
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-3xl font-bold shojumaru-regular text-lime-400">Community-Driven Governance</h3>
-                      <p className="text-[#6B7280] finger-paint-regular dark:text-[#D1D5DB]">
+                      <h3 className="text-3xl font-bold roboto-black-italic text-lime-400">Community-Driven Governance</h3>
+                      <p className="text-[#6B7280] roboto-black-italic dark:text-[#D1D5DB]">
                         Influence the direction of OkraCoin through community voting.*
                       </p>
-                      <img
+                      {/* <img
                         alt="OKRACOIN"
                         className="overflow-hidden rounded-xl sm:w-full lg:order-last "
                         src={laura}
                         width="550"
-                      />
+                      /> */}
                     </div>
                   </li>
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-3xl font-bold shojumaru-regular text-lime-400">Deflationary Tokenomics</h3>
-                      <p className="text-[#6B7280] finger-paint-regular dark:text-[#D1D5DB]">
+                      <h3 className="text-3xl font-bold roboto-black-italic text-lime-400">Deflationary Tokenomics</h3>
+                      <p className="text-[#6B7280] roboto-black-italic dark:text-[#D1D5DB]">
                         Enjoy the benefits of a deflationary token model that increases scarcity, with 1 trillion tokens aleady in circulation
                       </p>
                     </div>
@@ -206,56 +208,62 @@ const Page2 = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#1F2937] text-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-lime-100 text-white">
           <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="space-y-2">
-              <h2 className="text-3xl text-amber-400 bungee-shade-regular font-bold tracking-tighter md:text-4xl/tight">
+              <h2 className="text-3xl text-red-700 roboto-black-italic font-bold tracking-tighter md:text-4xl/tight">
                 Unlock the Power of Okra Investing
               </h2>
-              <p className="max-w-[600px] finger-paint-regular text-[#D1D5DB] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="max-w-[600px] roboto-black-italic text-green-900 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Okracoin offers a unique opportunity to participate in the okra-driven economy and potentially reap the
                 rewards.
               </p>
             </div>
             <div className="flex flex-col text-orange-400 justify-center gap-2 min-[400px]:flex-row lg:justify-end">
               <a
-                className="inline-flex finger-paint-regular h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
+                className="inline-flex roboto-black-italic h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                 href="#"
               >
                 Buy OkraCoin
               </a>
               <a
-                className="inline-flex finger-paint-regular h-10 items-center justify-center rounded-md border border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
-                href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08"
+                className="inline-flex roboto-black-italic h-10 items-center justify-center rounded-md border border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
+                href="https://gamma.app/docs/Introducing-Okra-Coin--p2oy7q8pe07m4h7?mode=doc"
               >
                 Learn More
               </a>
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#F3F4F6] dark:bg-[#1F2937]">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-lime-100 dark:bg-[#1F2937]">
           <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-[#E5E7EB] px-3 py-1 finger-paint-regular text-sm dark:bg-[#374151]">Community</div>
-              <h2 className="text-3xl text-amber-400 bungee-shade-regular font-bold tracking-tighter md:text-4xl/tight ">
+              <div className="inline-block rounded-lg bg-[#E5E7EB] px-3 py-1 roboto-black-italic text-sm dark:bg-[#374151]">Community</div>
+              <h2 className="text-3xl text-red-700 roboto-black-italic font-bold tracking-tighter md:text-4xl/tight ">
                 Join the OkraCoin Community
               </h2>
-              <p className="max-w-[600px] press-start-2p-regular text-[#6B7280] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-[#D1D5DB]">
+              <p className="max-w-[600px] roboto-black-italic text-green-900 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-[#D1D5DB]">
                 Connect with like-minded investors and be a part of the okra-inspired revolution.
               </p>
             </div>
             <div className="flex flex-col justify-center text-orange-400 gap-4">
               <a
-                className="inline-flex finger-paint-regular h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
+                className="inline-flex roboto-black-italic h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                 href="https://t.me/okracoin"
               >
                 Join Telegram
               </a>
               <a
-                className="inline-flex finger-paint-regular h-10 items-center justify-center rounded-md border border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
+                className="inline-flex roboto-black-italic h-10 items-center justify-center rounded-md border border-[#6B7280] bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[#6B7280]/20 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
                 href="https://x.com/coin_okra?t=SEz3Ndb5QuPsCyc2hRB2Zw&s=08"
               >
                 Follow on Twitter
+              </a>
+              <a
+                className="inline-flex roboto-black-italic h-10 items-center justify-center rounded-md bg-[#6B7280] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#6B7280]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#6B7280] disabled:pointer-events-none disabled:opacity-50"
+                href="https://gamma.app/docs/Introducing-Okra-Coin--p2oy7q8pe07m4h7?mode=doc"
+              >
+                Learn More
               </a>
             </div>
           </div>
