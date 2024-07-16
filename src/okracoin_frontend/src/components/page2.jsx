@@ -71,7 +71,7 @@ const Page2 = () => {
     
 
   return (
-    <div className="flex flex-col  min-w-[80vh] min-h-[100dvh] bg-green-300">
+    <div className="flex flex-col  min-w-[80vh] min-h-[100dvh] bg-lime-100">
       <header className="px-4 fixed overflow-hidden  w-[100%] lg:px-6 h-14 flex items-center bg-[#1F2937] text-white">
         <a className="flex items-center justify-center" href="#">
           <CoinsIcon className="h-10 w-10 text-green-200" />
@@ -94,7 +94,7 @@ const Page2 = () => {
         {!show && <button onClick={PlugConnect} className='rounded-2xl m-2 w-[15%] h-[50%] hover:bg-orange-800 hover:h-[60%] bg-orange-600 hover:text-white finger-paint-regular flex items-center justify-center align-center cursor-pointer'><p className='text-sm  text-white font-bold cursor-pointer'>PLUG</p></button>}
         {show && <div onClick={() => {alert("wallet connected! Buy OKra")}} className='rounded-2xl m-2 w-[15%] violet-gradient h-[50%] hover:h-[60%] finger-paint-regular text-red-600 hover:bg-violet-500 flex items-center justify-center cursor-pointer'><p className='text-sm cursor-pointer'>{show}</p></div>}
       </header>
-      <main className="flex-1 bg-green-100">
+      <main className="flex-1 bg-lime-100">
         <section className="w-full pl-6 pr-6 py-12 md:py-24 lg:py-32 xl:py-48 bg-lime-100  text-white">
           <div className="px-6 md:px-6 grid gap-3 lg:grid-cols-[1fr_400px] lg:gap-6 xl:grid-cols-[1fr_600px]">
             <div className=' lg:order-last md:w-[100%]'>
@@ -143,7 +143,7 @@ const Page2 = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12  md:py-24 lg:py-32 bg-lime-100 dark:bg-[#1F2937] ">
+        <section className="w-full py-12  md:py-24 lg:py-32 bg-lime-100 dark:bg-lime-300 ">
           <div className="container px-4 md:px-6 ">
             <div className=" items-center  space-y-4 text-center justify-center">
               <div className="space-y-2  rounded-2xl  w-full" >
@@ -208,7 +208,7 @@ const Page2 = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-lime-100 text-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-lime-100 text-white bg-lime-100">
           <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="space-y-2">
               <h2 className="text-3xl text-red-700 roboto-black-italic font-bold tracking-tighter md:text-4xl/tight">
@@ -235,7 +235,7 @@ const Page2 = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-lime-100 dark:bg-[#1F2937]">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-lime-100 dark:bg-lime-100">
           <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-[#E5E7EB] px-3 py-1 roboto-black-italic text-sm dark:bg-[#374151]">Community</div>

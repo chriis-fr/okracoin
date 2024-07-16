@@ -1,8 +1,10 @@
 {
   "okracoin_backend": {
-    "ic": "xudgm-bqaaa-aaaak-qikmq-cai"
+    "ic": "lupin-uqaaa-aaaak-qipra-cai",
+    "local": "asrmz-lmaaa-aaaaa-qaaeq-cai"
   },
   "okracoin_frontend": {
-    "ic": "x5anq-xyaaa-aaaak-qikna-cai"
+    "ic": "ltooz-ziaaa-aaaak-qiprq-cai",
+    "local": "a3shf-5eaaa-aaaaa-qaafa-cai"
   }
 }
