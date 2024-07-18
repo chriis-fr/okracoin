@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "../index.css"
-import { aura, drink, laura, mainimage } from '../assets';
+import { laura, mainimage } from '../assets';
 import { Link } from 'react-router-dom';
 
 const Page2 = () => {
@@ -10,11 +10,17 @@ const Page2 = () => {
 
   const PlugConnect  = async () => {
     try{
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // Redirect to the Plug app if the user is on a mobile device
+      window.location.href = "https://plugwallet.ooo/app"; // Replace with the actual URL of the Plug app if needed
+    } else {
       if (typeof window.ic !== "undefined" && typeof window.ic.plug !== "undefined"){
         const plug = window.ic.plug;
 
         const connected = await plug.requestConnect({
-          whitelist: ["bkyz2-fmaaa-aaaaa-qaaaq-cai", "bd3sg-teaaa-aaaaa-qaaba-cai"]
+          whitelist: ["bkyz2-fmaaa-aaaaa-qaaaq-cai", "bd3sg-teaaa-aaaaa-qaaba-cai", "c36a6-tiaaa-aaaam-acpxa-cai"]
         })
 
         if (connected) {
@@ -46,8 +52,9 @@ const Page2 = () => {
 
     } else {
       console.error("plug wallet not found")
+      window.alert("plug wallet not found, use the app")
     }
-        }catch(error){
+       } }catch(error){
       console.error("Plug wallet connection failed", error)
       alert("error connection to wallet")
     }
@@ -95,14 +102,14 @@ const Page2 = () => {
         {show && <div onClick={() => {alert("wallet connected! Buy OKra")}} className='rounded-2xl m-2 w-[15%] violet-gradient h-[50%] hover:h-[60%] finger-paint-regular text-red-600 hover:bg-violet-500 flex items-center justify-center cursor-pointer'><p className='text-sm cursor-pointer'>{show}</p></div>}
       </header>
       <main className="flex-1 bg-lime-100">
-        <section className="w-full pl-6 pr-6 py-12 md:py-24 lg:py-32 xl:py-48 bg-lime-100  text-white">
-          <div className="px-6 md:px-6 grid gap-3 lg:grid-cols-[1fr_400px] lg:gap-6 xl:grid-cols-[1fr_600px]">
-            <div className=' lg:order-last md:w-[100%]'>
+        <section className="w-full flex border pl-6 pr-6 py-12 md:py-24 lg:py-32 xl:py-48 bg-lime-100  text-white">
+          <div className="px-6 md:px-6 flex flex-col h-[65vh] lg:flex-row lg:gap-6 xl:gap-6">
+            <div className=' lg:order-last lg:w-[50%] h-[100vh] w-[100%] m-4'>
             <img
               alt="OKRACOIN"
-              className="overflow-hidden  rounded-xl lg:order-last "
+              className="overflow-hidden lg:w-[500px] w-[300px] h-[500px] rounded-xl lg:order-last "
               src={mainimage}
-              width="500px"
+              // width="350px"
             />
             </div>
             
@@ -143,15 +150,15 @@ const Page2 = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12  md:py-24 lg:py-32 bg-lime-100 dark:bg-lime-300 ">
+        <section className="w-full py-12  md:py-24 lg:py-32 bg-lime-100 ">
           <div className="container px-4 md:px-6 ">
             <div className=" items-center  space-y-4 text-center justify-center">
               <div className="space-y-2  rounded-2xl  w-full" >
                 
-                <h2 className="text-red-700 font-bold roboto-black-italic tracking-tighter sm:text-5xl text-3xl pt-4 p-2">
+                <h2 className="text-lime-400 font-bold roboto-black-italic tracking-tighter sm:text-5xl text-3xl pt-4 p-2">
                   Revolutionize Your Investments
                 </h2>
-                <p className="max-w-[900px] text-red-900 roboto-black-italic p-2  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
+                <p className="max-w-[900px] text-[#6B7280] roboto-black-italic p-2  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
                    <span className='font-bold text-3xls'>OkraCoin</span> offers a unique and exciting way to participate in the okra-driven economy. Discover the
                   power of this innovative cryptocurrency.
                 </p>
@@ -160,10 +167,10 @@ const Page2 = () => {
             <div className="mx-auto grid  max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <img
                 alt="Image"
-                className="overflow-hidden rounded-xl h-full sm:w-full lg:order-last "
-                height="550"
+                className="overflow-hidden h-[400px] rounded-xl w-[350px] lg:order-last "
+                // height="550"
                 src={laura}
-                width="550"
+                // width="550"
               />
               <div className="flex flex-col justify-center space-y-4">
                 <ul className="grid gap-6">
@@ -211,7 +218,7 @@ const Page2 = () => {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-lime-100 text-white bg-lime-100">
           <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="space-y-2">
-              <h2 className="text-3xl text-red-700 roboto-black-italic font-bold tracking-tighter md:text-4xl/tight">
+              <h2 className="text-3xl text-lime-400 roboto-black-italic font-bold tracking-tighter md:text-4xl/tight">
                 Unlock the Power of Okra Investing
               </h2>
               <p className="max-w-[600px] roboto-black-italic text-green-900 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -235,11 +242,11 @@ const Page2 = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-lime-100 dark:bg-lime-100">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-lime-100 ">
           <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-[#E5E7EB] px-3 py-1 roboto-black-italic text-sm dark:bg-[#374151]">Community</div>
-              <h2 className="text-3xl text-red-700 roboto-black-italic font-bold tracking-tighter md:text-4xl/tight ">
+              <h2 className="text-3xl text-lime-400 roboto-black-italic font-bold tracking-tighter md:text-4xl/tight ">
                 Join the OkraCoin Community
               </h2>
               <p className="max-w-[600px] roboto-black-italic text-green-900 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-[#D1D5DB]">
